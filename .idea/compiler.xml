@@ -11,9 +11,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="hotel" target="1.5" />
+      <module name="hotel" target="1.6" />
       <module name="hotel_project" target="8" />
-      <module name="hotel_web" target="1.5" />
+      <module name="hotel_web" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
