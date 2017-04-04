@@ -11,49 +11,51 @@
 <html>
 <body>
 
+
 <table border="1">
     <thead>
     <tr>
-        <th>meno</th>
-        <th>dátum narodenia</th>
-        <th>telefónne číslo</th>
+        <th>číslo poschodia</th>
+        <th>kapacita</th>
+        <th>balkón</th>
     </tr>
     </thead>
-    <c:forEach items="${guests}" var="guest">
+    <c:forEach items="${rooms}" var="room">
         <tr>
-            <td><c:out value="${guest.name}"/></td>
-            <td><c:out value="${guest.dateOfBirth}"/></td>
-            <td><c:out value="${guest.phoneNumber}"/></td>
-            <td><form method="post" action="${pageContext.request.contextPath}/guests/delete?id=${guest.id}"
-                      style="margin-bottom: 0;"><input type="submit" value="Zmatať"></form></td>
+            <td><c:out value="${room.floorNumber}"/></td>
+            <td><c:out value="${room.capacity}"/></td>
+            <td><c:out value="${room.balcony}"/></td>
+            <td><form method="post" action="${pageContext.request.contextPath}/rooms/delete?id=${room.id}"
+                      style="margin-bottom: 0;"><input type="submit" value="Zmazať"></form></td>
         </tr>
     </c:forEach>
 </table>
 
-<h2>Zadajte hosťa</h2>
+<h2>Zadajte izbu</h2>
 <c:if test="${not empty chyba}">
     <div style="border: solid 1px red; background-color: yellow; padding: 10px">
         <c:out value="${chyba}"/>
     </div>
 </c:if>
-<form action="${pageContext.request.contextPath}/guests/add" method="post">
+<form action="${pageContext.request.contextPath}/rooms/add" method="post">
     <table>
         <tr>
-            <th>Meno hosťa:</th>
-            <td><input type="text" name="name" value="<c:out value='${param.name}'/>"/></td>
+            <th>číslo poschodia:</th>
+            <td><input type="text" name="floorNumber" value="<c:out value='${param.floorNumber}'/>"/></td>
         </tr>
         <tr>
-            <th>dátum narodenia:</th>
-            <td><input type="text" name="dateOfBirth" value="<c:out value='${param.dateOfBirth}'/>"/></td>
+            <th>kapacita:</th>
+            <td><input type="text" name="capacity" value="<c:out value='${param.capacity}'/>"/></td>
         </tr>
         <tr>
-            <th>telefónne číslo:</th>
-            <td><input type="text" name="phoneNumber" value="<c:out value='${param.phoneNumber}'/>"/></td>
+            <th>balkón:</th>
+            <td><input type="text" name="balcony" value="<c:out value='${param.balcony}'/>"/></td>
         </tr>
     </table>
     <input type="Submit" value="Zadať" />
 </form>
 
+
 </body>
 </html>
-</html>
+

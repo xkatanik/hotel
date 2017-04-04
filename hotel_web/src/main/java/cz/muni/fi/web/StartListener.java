@@ -24,7 +24,7 @@ public class StartListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent ev) {
         log.info("webová aplikácia inicializována");
         ServletContext servletContext = ev.getServletContext();
-        ApplicationContext springContext = new AnnotationConfigApplicationContext(Main.SpringConfig.class);
+        ApplicationContext springContext = new AnnotationConfigApplicationContext(SpringConfig.class);
         servletContext.setAttribute("guestManager", springContext.getBean("guestManager", GuestManager.class));
         servletContext.setAttribute("roomManager", springContext.getBean("roomManager", RoomManager.class));
         servletContext.setAttribute("bookingManager", springContext.getBean("bookingManager", BookingManager.class));
