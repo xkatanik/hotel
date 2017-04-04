@@ -17,17 +17,47 @@
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.1.9" />
           <element id="library" level="project" name="Maven: org.apache.derby:derby:10.12.1.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-dbcp2:2.1.1" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.4.2" />
           <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
           <element id="library" level="project" name="Maven: org.apache.taglibs:taglibs-standard-spec:1.2.5" />
           <element id="library" level="project" name="Maven: org.apache.taglibs:taglibs-standard-impl:1.2.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:graphaware-framework-server-enterprise:2.2.6.35" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:server-enterprise:2.2.6.35" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:server-common:2.2.6.35" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.6.RELEASE" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:runtime-api:2.2.6.35" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:common:2.2.6.35" />
+          <element id="library" level="project" name="Maven: com.esotericsoftware.kryo:kryo:2.16" />
+          <element id="library" level="project" name="Maven: com.esotericsoftware.reflectasm:reflectasm:shaded:1.06" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:4.0" />
+          <element id="library" level="project" name="Maven: com.esotericsoftware.minlog:minlog:1.2" />
+          <element id="library" level="project" name="Maven: org.objenesis:objenesis:2.4" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.5.2" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.6" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
+          <element id="library" level="project" name="Maven: com.eaio.uuid:uuid:3.4" />
+          <element id="library" level="project" name="Maven: com.eaio:grabbag:1.8.1" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:api:2.2.6.35" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.6" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.6" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.6" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:runtime:2.2.6.35" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:writer-api:2.2.6.35" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:writer:2.2.6.35" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:tx-executor:2.2.6.35" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:17.0" />
+          <element id="library" level="project" name="Maven: com.graphaware.neo4j:tx-api:2.2.6.35" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.0" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-math3:3.3" />
         </element>
       </element>
       <element id="directory" name="META-INF">

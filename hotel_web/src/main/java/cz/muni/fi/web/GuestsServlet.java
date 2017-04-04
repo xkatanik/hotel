@@ -3,6 +3,7 @@ package cz.muni.fi.web;
 import cz.muni.fi.hotel.Guest;
 import cz.muni.fi.hotel.GuestManager;
 import cz.muni.fi.hotel.common.GuestException;
+import org.apache.derby.client.am.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 /**
  * Created by ${KristianKatanik} on 03.04.2017.
@@ -41,10 +46,12 @@ public class GuestsServlet extends HttpServlet{
             case "/add":
                 //getting POST parameters from form
                 String name = request.getParameter("name");
-                LocalDate dateOfBirth = LocalDate.of(request.getParameter("dateOfBirth"));
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+                formatter = formatter.withLocale(Locale.UK );
+                LocalDate dateOfBirth = LocalDate.parse(request.getParameter("dateOfBirth"), formatter);
                 String phoneNumber = request.getParameter("phoneNumber");
                 //form data validity check
-                if (name == null || name.length() == 0 || phoneNumber == null || phoneNumber.length() == 0 || dateOfBirth == null) {
+                if (name == null || name.length() == 0 || phoneNumber == null || phoneNumber.length() == 0) {
                     request.setAttribute("chyba", "Je nutné vyplniť všetky hodnoty !");
                     log.debug("form data invalid");
                     showGuestsList(request, response);

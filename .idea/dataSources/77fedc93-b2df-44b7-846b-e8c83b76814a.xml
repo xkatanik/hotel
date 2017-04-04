@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MojeDB@localhost">
+  <database-model serializer="dbm" rdbms="DERBY" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="APP"/>
+    <schema id="3" parent="1" name="NULLID"/>
+    <schema id="4" parent="1" name="SNAGYOVA">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="5" parent="1" name="SQLJ"/>
+    <schema id="6" parent="1" name="SYS"/>
+    <schema id="7" parent="1" name="SYSCAT"/>
+    <schema id="8" parent="1" name="SYSCS_DIAG"/>
+    <schema id="9" parent="1" name="SYSCS_UTIL"/>
+    <schema id="10" parent="1" name="SYSFUN"/>
+    <schema id="11" parent="1" name="SYSIBM"/>
+    <schema id="12" parent="1" name="SYSPROC"/>
+    <schema id="13" parent="1" name="SYSSTAT"/>
+    <table id="14" parent="4" name="BOOKINGS"/>
+    <table id="15" parent="4" name="GUESTS"/>
+    <table id="16" parent="4" name="ROOMS"/>
+    <column id="17" parent="14" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>AUTOINCREMENT: start 1 increment 1</DefaultExpression>
+    </column>
+    <column id="18" parent="14" name="PRICE">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="19" parent="14" name="ROOMID">
+      <Position>3</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+    </column>
+    <column id="20" parent="14" name="GUESTID">
+      <Position>4</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+    </column>
+    <column id="21" parent="14" name="ARRIVALDATE">
+      <Position>5</Position>
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="22" parent="14" name="DEPARTUREDATE">
+      <Position>6</Position>
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <key id="23" parent="14" name="SQL170330153343250">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="24" parent="14" name="SQL170330153343251">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ROOMID</ColNames>
+      <RefSchemaName>SNAGYOVA</RefSchemaName>
+      <RefTableName>ROOMS</RefTableName>
+      <RefKeyName>SQL170330152805650</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="25" parent="14" name="SQL170330153343252">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>GUESTID</ColNames>
+      <RefSchemaName>SNAGYOVA</RefSchemaName>
+      <RefTableName>GUESTS</RefTableName>
+      <RefKeyName>SQL170330153040670</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="26" parent="15" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>AUTOINCREMENT: start 1 increment 1</DefaultExpression>
+    </column>
+    <column id="27" parent="15" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="28" parent="15" name="DATEOFBIRTH">
+      <Position>3</Position>
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="29" parent="15" name="PHONENUMBER">
+      <Position>4</Position>
+      <DataType>VARCHAR(20)|12</DataType>
+    </column>
+    <key id="30" parent="15" name="SQL170330153040670">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="16" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT(19)|-5</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>AUTOINCREMENT: start 1 increment 1</DefaultExpression>
+    </column>
+    <column id="32" parent="16" name="FLOORNUMBER">
+      <Position>2</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="33" parent="16" name="CAPACITY">
+      <Position>3</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <column id="34" parent="16" name="BALCONY">
+      <Position>4</Position>
+      <DataType>SMALLINT(5)|5</DataType>
+    </column>
+    <key id="35" parent="16" name="SQL170330152805650">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,10 +1,10 @@
 package cz.muni.fi.web;
 
-import cz.muni.fi.hotel.GuestManagerImpl;
-import cz.muni.fi.hotel.Main;
-import cz.muni.fi.hotel.RoomManagerImpl;
+import cz.muni.fi.hotel.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -24,10 +24,11 @@ public class StartListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent ev) {
         log.info("webová aplikácia inicializována");
         ServletContext servletContext = ev.getServletContext();
-        DataSource dataSource = Main.createMemoryDatabase();
-        servletContext.setAttribute("guestManager", new GuestManagerImpl(dataSource));
-        servletContext.setAttribute("roomManager", new RoomManagerImpl(dataSource));
-        log.info("vytvorení manažéri a uložený do atribútov servletContextu");
+        ApplicationContext springContext = new AnnotationConfigApplicationContext(Main.SpringConfig.class);
+        servletContext.setAttribute("guestManager", springContext.getBean("guestManager", GuestManager.class));
+        servletContext.setAttribute("roomManager", springContext.getBean("roomManager", RoomManager.class));
+        servletContext.setAttribute("bookingManager", springContext.getBean("bookingManager", BookingManager.class));
+        log.info("vytvořeny manažery");
     }
 
     @Override
